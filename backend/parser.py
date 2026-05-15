@@ -16,6 +16,4 @@ def parse(data):
         elif token.isdigit() and current_command is not None:
             commands.append((current_command, int(token)))
             current_command = None
-    
-    print(commands)
 
