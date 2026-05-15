@@ -1,3 +1,4 @@
+from theader import speech_queue
 import parser
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -16,5 +17,4 @@ app.add_middleware(
 def root():
     return {"message": "active"}
 
-
-parser.parse("timer 50 alarm 20")
+speech_queue.put("Power on")
