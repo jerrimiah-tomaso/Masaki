@@ -1,3 +1,4 @@
+import parser
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -13,4 +14,7 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    return {"message": "MASAKI backend online"}
+    return {"message": "active"}
+
+
+parser.parse("timer 50 alarm 20")
